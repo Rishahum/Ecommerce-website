@@ -15,4 +15,3 @@ module.exports.userToken = (user, statusCode, res)=>{
     token,
   });
 }
-module.exports = sendToken;
