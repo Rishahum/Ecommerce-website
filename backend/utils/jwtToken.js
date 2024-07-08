@@ -1,4 +1,4 @@
-module.exports.userToken = (user, statusCode, res)=>{
+module.exports.sendToken = (user, statusCode, res)=>{
     const token = user.getJWTToken()
 
   // options for cookie
