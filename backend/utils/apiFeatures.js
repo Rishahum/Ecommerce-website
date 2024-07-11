@@ -11,7 +11,9 @@ class ApiFeatures {
             }
         }:{}
         this.query= this.query.find({...keywoard})
-        return this;
+        return this;// jo bhi query krne p aayega agr 
+      //kuch  query nhi kia to this.query = query hai hi mtlb Product.find()-> allProducts
+      
     }
     filter(){
         const queryCopy= {...this.queryStr}
@@ -33,6 +35,7 @@ class ApiFeatures {
         const currentPage= Number(this.queryStr.page) || 1
         const skip = resultPerPage* (currentPage-1)
         this.query = this.query.limit(resultPerPage).skip(skip)
+        return this;
     }
     
 }
